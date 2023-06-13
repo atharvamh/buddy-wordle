@@ -1,0 +1,89 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.letter-cell{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  border: 1px solid #e1e1e1;
+  border-radius: 0.2rem;
+  max-height: 3.5rem;
+  min-width: 2rem;
+  width: auto;
+  font-size: 2.5rem;
+}
+
+.row-container{
+  display: flex;
+  flex-direction: row;
+  column-gap: 4px;
+}
+
+.header{
+  display: flex;
+  background-color: #fff;
+  color: #000;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  flex-direction: row;
+  column-gap: 2em;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 80;
+}
+
+.header-title{
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.grid-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  row-gap: 4px;
+  flex-direction: column;
+  margin-top: 3em;
+}
+
+.flip{
+  transform: rotateX(180deg);
+  transition: transform 500ms;
+}
+
+.reverse-flip{
+  transform: rotateX(-180deg);
+  transition: transform 500ms;
+}
+
+.modal-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: "#000";
+  flex-direction: column;
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 500ms ease-in-out;
+  z-index: 100;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+  transform: translateX(-100px);
+}
