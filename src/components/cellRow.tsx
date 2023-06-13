@@ -11,7 +11,7 @@ export default function CellRow({ rowData } : ICellRow) {
         <div className="row-container">
             {
                 rowData?.map((data : IRowData) => 
-                    <Cell cellData={data} />
+                    <Cell cellData={data} key={`cell-${crypto.randomUUID()}`} />
                 )
             }
         </div>

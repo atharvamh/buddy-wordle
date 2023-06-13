@@ -11,7 +11,7 @@ export default function WordGrid({ gridData } : IWordGrid){
         <div className="grid-container">
             {
                 gridData?.map((rowdata) => 
-                    <CellRow rowData={rowdata} />
+                    <CellRow rowData={rowdata} key={`row-${crypto.randomUUID()}`} />
                 )
             }
         </div>

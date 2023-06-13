@@ -9,13 +9,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem 2rem;
+  width: 60px;
+  height: 60px;
   border: 1px solid #e1e1e1;
   border-radius: 0.2rem;
-  max-height: 3.5rem;
-  min-width: 2rem;
-  width: auto;
-  font-size: 2.5rem;
+  font-size: 1.2em;
 }
 
 .row-container{
@@ -44,13 +42,21 @@
   font-size: 1.5rem;
 }
 
+.game-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  row-gap: 4px;
+  flex-direction: column;
+  margin-top: 5em;
+}
+
 .grid-container{
   display: flex;
   align-items: center;
   justify-content: center;
   row-gap: 4px;
   flex-direction: column;
-  margin-top: 3em;
 }
 
 .flip{
@@ -86,4 +92,30 @@
 .ReactModal__Overlay--before-close {
   opacity: 0;
   transform: translateX(-100px);
+}
+
+.keyboard-layout{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.2em;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+.keyboard-row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5em;
+  flex-direction: row;
+  column-gap: 8px;
+}
+
+.key{
+  font-size: 1.2em;
+  border: 1px solid #fff;
+  border-radius: 0.1em;
+  padding: 0.5em;
+  cursor: pointer;
 }

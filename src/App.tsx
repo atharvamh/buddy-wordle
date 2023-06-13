@@ -6,6 +6,7 @@ import { maxGuesses, maxRowLength, rowData } from './constants/appconstants';
 import { IRowData } from './interfaces/IRowData';
 import { checkWord } from './utils/helper';
 import Modal from "react-modal";
+import KeyBoardLayout from './components/keyboard';
 
 function App() {
 
@@ -75,14 +76,17 @@ function App() {
   return (
     <div className="app-container">
       <Header attempt={attempt}/>
-      <WordGrid gridData={gridData} />
+      <div className="game-container">
+        <WordGrid gridData={gridData} />
+        <KeyBoardLayout handleKeyPress={handleKeyPress}/>
+      </div>
       <Modal 
         isOpen={openStatsModal}
         closeTimeoutMS={500}
         onRequestClose={() => setOpenStatsModal(false)}
       >
-        <div style={{ alignItems: "center", justifyContent : "center", color: "#000", display: "flex", flexDirection: "column" }}>
-          <h1>Statistics</h1>
+        <div className="modal-content">
+          <h1 style={{ color : "#000" }}>Statistics</h1>
           <h2 style={{ color : "#538d4e" }}>Congratulations! You have successfully solved the wordle on Attempt {attempt}</h2>
         </div>
       </Modal>
