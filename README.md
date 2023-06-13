@@ -1,0 +1,2 @@
+# buddy-wordle
+buddy-wordle
