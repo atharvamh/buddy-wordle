@@ -1,15 +1,10 @@
-import { maxGuesses } from "../constants/appconstants";
-import logo from "../assets/react-wordle.svg";
+import logo from "../assets/logo.jpg";
 
-interface IHeader{
-    attempt: number;
-}
-
-export default function Header({ attempt } : IHeader){
+export default function Header(){
     return (
         <div className="header">
             <p> <img src={logo} width={"auto"} height={50}/> </p>
-            <p className="header-title">BUDDY WORDLE (<span>ATTEMPT : { attempt } / { maxGuesses }</span>)</p>
+            <p className="header-title">BWORDLE</p>
         </div>
     )
 }

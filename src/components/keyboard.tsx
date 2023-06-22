@@ -4,7 +4,6 @@ interface IKeyboardLayout{
     handleKeyPress: (event : {key : string , keyCode : number }) => void;
 }
 
-
 export default function KeyBoardLayout({ handleKeyPress } : IKeyboardLayout){
     return (
         <div className="keyboard-layout">
@@ -25,7 +24,9 @@ export default function KeyBoardLayout({ handleKeyPress } : IKeyboardLayout){
             <div className="keyboard-row">
                 {
                     keyboardRow3.map((item) => 
-                        <div className="key" key={`key-${crypto.randomUUID()}`} onClick={() => handleKeyPress(item)}>{item.key}</div>
+                        <div className="key" key={`key-${crypto.randomUUID()}`} onClick={() => handleKeyPress(item)}>
+                            {item.shortCode ? item.shortCode : item.key}
+                        </div>
                     )
                 }
             </div>

@@ -32,7 +32,7 @@ export const keyboardRow2 = [
 ];
 
 export const keyboardRow3 = [
-    { key : "Enter", keyCode : 13},
+    { key : "Enter", keyCode : 13, shortCode: "ENT"},
     { key : "Z", keyCode : 90},
     { key : "X", keyCode : 88},
     { key : "C", keyCode : 67},
@@ -40,5 +40,5 @@ export const keyboardRow3 = [
     { key : "B", keyCode : 66},
     { key : "N", keyCode : 78},
     { key : "M", keyCode : 77},
-    { key : "Backspace", keyCode : 8},
+    { key : "Backspace", keyCode : 8, shortCode : "DEL"},
 ];

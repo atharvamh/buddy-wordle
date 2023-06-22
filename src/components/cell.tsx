@@ -1,3 +1,4 @@
+import { useCallback } from "react";
 import { IRowData } from "../interfaces/IRowData";
 
 interface ICell {
@@ -17,17 +18,14 @@ export default function Cell({ cellData } : ICell){
         return isPosNegOne || isPresenceNegOne ? "transparent" : isPosCorrect ? "#538d4e" : hasPresence ? "#b59f3b" : "#3a3a3c"
     }
 
-    const applyAnimation = (isReverseFlip = false) => {
-        if(isReverseFlip){
-            return isPosNegOne || isPresenceNegOne ? "none" : "reverse-flip"
-        }
-
-        return isPosNegOne || isPresenceNegOne ? "none" : "flip";
-    }
-
     return (
-        <div className={`letter-cell ${applyAnimation()}`} style={{ backgroundColor : getBackgroundColor() }}>
-            <p className={`${applyAnimation(true)}`}>{ char }</p>
+        <div 
+            className={`letter-cell ${isPosNegOne || isPresenceNegOne ? "none" : "flip"}`} 
+            style={{ backgroundColor : getBackgroundColor() }}
+        >
+            <p className={`${isPosNegOne || isPresenceNegOne ? "none" : "reverse-flip"}`}>
+                { char }
+            </p>
         </div>
     )
 }

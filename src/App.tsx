@@ -75,19 +75,26 @@ function App() {
 
   return (
     <div className="app-container">
-      <Header attempt={attempt}/>
+      <header id="app-header">
+        <Header />
+      </header>
       <div className="game-container">
         <WordGrid gridData={gridData} />
-        <KeyBoardLayout handleKeyPress={handleKeyPress}/>
       </div>
+      <footer id="app-footer">
+        <KeyBoardLayout handleKeyPress={handleKeyPress}/>
+      </footer>
       <Modal 
         isOpen={openStatsModal}
         closeTimeoutMS={500}
         onRequestClose={() => setOpenStatsModal(false)}
       >
         <div className="modal-content">
-          <h1 style={{ color : "#000" }}>Statistics</h1>
-          <h2 style={{ color : "#538d4e" }}>Congratulations! You have successfully solved the wordle on Attempt {attempt}</h2>
+          <h2 style={{ color : "#000" }}>Statistics</h2>
+          <h3 style={{ color : "#538d4e" }}>
+            Congratulations! <br /><br />
+            You have successfully solved the wordle in {attempt} Attempt(s)
+          </h3>
         </div>
       </Modal>
     </div>
