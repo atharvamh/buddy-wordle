@@ -1,4 +1,3 @@
-import { useCallback } from "react";
 import { IRowData } from "../interfaces/IRowData";
 
 interface ICell {
